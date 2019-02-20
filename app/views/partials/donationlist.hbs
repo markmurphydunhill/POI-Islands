@@ -1,0 +1,47 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <aside class="six wide column">
+            <img src="images/homer5.jpg" class="ui medium image">
+        </aside>
+        <article class="eight wide column">
+
+            {{#each regions}}
+                <section class="ui stacked segment">
+                    <h2 class="ui header">
+                        {{title}}
+                        {{name}}
+                    </h2>
+                    <p> Total Duration:  </p>
+
+                    <a href="/islandlist/{{_id}}" class="ui icon button">
+                        <i class="icon folder open"></i>
+                    </a>
+                </section>
+            {{/each}}
+
+                <table class="ui celled table segment">
+                <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Coastal Zone</th>
+                    <th>Cursor</th>
+                    <th>Candidate</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each combinedinfo}}
+                    <tr>
+                        <td> {{region}} </td>
+
+                        <td> {{island}} </td>
+                        <td> {{cursor}} </td>
+
+
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+
+        </article>
+    </div>
+</section>
