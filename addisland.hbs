@@ -1,0 +1,54 @@
+<section class="ui raised segment">
+    <div class="ui grid ">
+        <div class="ui form ten wide column">
+            <div class="ui stacked segment">
+                <form action="/addIsland" method="POST">
+
+                    <div class="grouped inline fields">
+                        <h3> Select region </h3>
+                        {{#each regions }}
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="region" value="{{title}}">
+                                    <label>{{title}}</label>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+
+                    <div class="ui header">
+                        <label>Add Island Details</label>
+                    </div>
+
+                    <div class="field">
+                        <label>Name</label>
+                        <input placeholder="Name" type="text" name="islandName">
+                    </div>
+
+                    <div class="field">
+                        <label>Description</label>
+                        <input placeholder="Description" type="text" name="islandDescription">
+                    </div>
+
+                    <div class="two fields">
+
+                        <div class="field">
+                            <label>Latitude</label>
+                            <input placeholder = "Lat" type = "number" name="lat">
+                        </div>
+
+                        <div class="field">
+                            <label>Longitude</label>
+                            <input placeholder="Long" type="text" name="long">
+                        </div>
+                    </div>
+
+                    <button class="ui blue submit button">Add Island</button>
+                </form>
+            </div>
+        </div>
+        <aside class="six wide column">
+            <img src="images/homer4.jpeg" class="ui medium image">
+        </aside>
+    </div>
+</section>

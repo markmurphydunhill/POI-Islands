@@ -1,0 +1,30 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <aside class="six wide column">
+            <img src="images/homer5.jpg" class="ui medium image">
+        </aside>
+        <article class="eight wide column">
+            {{#each regions}}
+                <form action="/listIsland" method="POST">
+
+                    <section class="ui stacked segment">
+                        <h2 class="ui header">
+                            {{title}}
+
+                        </h2>
+                        <p> Total Duration:  </p>
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <input type="hidden" name="title" value="{{title}}">
+
+
+                        <button class="ui blue submit button">View All Islands in Regions</button>
+
+
+
+                    </section>
+
+                </form>
+            {{/each}}
+        </article>
+    </div>
+</section>

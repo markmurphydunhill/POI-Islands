@@ -1,0 +1,62 @@
+{{> mainmenu }}
+<section class="ui raised segment">
+    <div class="ui grid">
+
+        {{#each islands}}
+
+
+
+            <section class="ui stacked segment">
+                <h2 class="ui header">
+
+                    {{name}}
+                </h2>
+                <table class="ui celled table segment">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Costal Zone</th>
+                        <th>Region</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td> {{name}} </td>
+                        <td> {{description}} </td>
+                        <td>{{costalZone}}</td>
+                        <td> {{region}} </td>
+                        <td>
+                            <form action="/showIsland" method="POST">
+                                <input type="hidden" name="id" value="{{_id}}">
+                                <button class="ui blue tiny submit button">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/deleteIsland" method="POST">
+                                <input type="hidden" name="id" value="{{_id}}">
+                                <button class="ui tiny red button">Delete</button>
+                            </form>
+
+
+                        </td>
+
+
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                </a>
+
+
+
+            </section>
+
+        {{/each}}
+
+    </div>
+</section>

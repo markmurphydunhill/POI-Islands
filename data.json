@@ -1,0 +1,191 @@
+{
+  "users": {
+    "_model": "User",
+    "homer": {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret"
+    },
+    "marge": {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret"
+    },
+    "bart": {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret"
+    }
+  },
+  "candidates": {
+    "_model": "Candidate",
+    "lisa": {
+      "firstName": "Lisa",
+      "lastName": "Simpson",
+      "office": "President"
+    },
+    "donald": {
+      "firstName": "Donald",
+      "lastName": "Simpson",
+      "office": "President"
+    }
+  },
+  "donations": {
+    "_model": "Donation",
+    "one": {
+      "amount": 40,
+      "method": "paypal",
+      "donor": "->users.bart",
+      "candidate": "->candidates.lisa"
+    },
+    "two": {
+      "amount": 90,
+      "method": "direct",
+      "donor": "->users.marge",
+      "candidate": "->candidates.lisa"
+    },
+    "three": {
+      "amount": 430,
+      "method": "paypal",
+      "donor": "->users.homer",
+      "candidate": "->candidates.donald"
+    }
+  },
+
+
+
+  "regions": {
+    "_model": "Regions",
+
+    "North East": {
+      "title": "North East",
+      "geo": {
+        "lat": 54.7,
+        "long": -6.1412
+      }
+    },
+      "East Coast": {
+        "title": "East Coast",
+        "geo": {
+          "lat": 53.306,
+          "long": -6.437
+        }
+      }
+    },
+
+  "islands": {
+    "_model": "Islands",
+
+    "LoughFoyle": {
+      "name": "**Lough Foyle**",
+      "coordinates": {
+        "geo": {
+          "lat": 55.19369052,
+          "long": -6.96442359
+        }
+      },
+      "description": "This is a lovely island",
+      "costalZone": "**The North East**",
+      "region": "->regions.North East"
+    },
+
+    "PortStewart":{
+      "name": "**Portstewart**",
+      "coordinates": {
+        "geo": {
+          "lat": 55.18778894,
+          "long": -6.72122191
+        }
+      },
+
+      "description": "<p><strong>Portstewart</strong> C815-386 Sheet 4 The area behind Portstewart Strand to the W of the town is part golf course and part National Trust. There is fee-paying access to the NT section, where there are toilets and parking. There is a powerful rip each end of the strand. When the strand is dumping, it is better to launch off a slip at Portnahapple at C813-376, which is usable in most conditions, but be aware that access is difficult from car parks in the area.. The harbour at C815-386 can be difficult to enter or exit in heavy seas, with multi-directional reflected waves. The slip is exposed to surge. There is good parking and this is the access of choice in calm conditions. There is some interesting rock hopping locally, clapotis almost always and some small caves and a blowhole that performs well in good swell. The tide can run fast around Portstewart Point.</p> ",
+      "costalZone": "**The North East**",
+      "region": "->regions.North East"
+    },
+
+    "Portrush":{
+      "name": "**Portrush**",
+      "coordinates": {
+
+        "geo": {
+          "lat": 55.20595449,
+          "long": -6.65623781
+        }
+      },
+      "description": "<p><strong>Portrush</strong> C856-407 Sheet 4 Portrush West Bay is easily accessed under the railway line. The slipway in the harbour is awkward in swell, being quite close to the entrance and is quite busy. Consider using Portandoo Harbour at C857-412 instead, though the parking is a little more remote. There is also good parking at the W end of Curran Strand with parking at C863-406. Ramore Head is interesting exploring in calm conditions. Skerries Sound often kicks up and is best avoided by the inexperienced. The ebb sets up powerful standing waves.</p> ",
+      "costalZone": "**The North East**",
+      "region": "->regions.North East"
+    },
+
+    "PortrushtoPortballintrae":{
+      "name": "**Portrush to Portballintrae**",
+
+      "coordinates": {
+        "geo": {
+          "lat": 55.20595449,
+          "long": -6.65623781
+        }
+      },
+
+      "description": "<p><strong>Portrush to Portballintrae</strong> C856-407 – C930-424 Sheet 4 White Rocks Beach at C899-411 is accessible from the road and there are good toilet and day time parking facilities. Calm conditions are necessary as the surf can be quite powerful with large dumping waves in heavy seas. The rips are strong and the tide flows strongly just beyond the break line. The rips are easily read from above on the road. It is mainly cliffs eastwards to Portballintrae. There are a number of interesting caves in the first section along under prominent Dunluce Castle at C905-415. One such cave is directly under the castle. Exploration of some of the other caves hereabouts requires a torch. There is good rock hopping eastwards to Portballintrae, with at least one good sheltered deep water landing in a channel about the halfway mark. Another cave just W of Binbane Cove is 40 to 50<em>m</em> long. Beware of a choke point halfway in, where the surge can catch the unwary. In Portballintrae Harbour, there is a public slipway at C926-423. There are toilets and a car park which can become quite congested in summer. Local surfers prefer the larger car park at C930-424 overlooking Bushfoot Strand to the E of the town. Access to the beach is just W of the car park. Kayakers always prefer the harbour.</p> ",
+      "costalZone": "**The North East**",
+      "region": "->regions.North East"
+    },
+
+    "Downhill": {
+      "name": "**Downhill**",
+      "coordinates": {
+        "geo": {
+          "lat": 55.16721802,
+          "long": -6.81917323
+        }
+      },
+      "description": "This is a lovely island",
+      "costalZone": "**The North East**",
+      "region": "->regions.North East"
+    },
+    "PortStewarttoPortrush": {
+      "name": "**Portstewart to Portrush**",
+
+      "coordinates": {
+        "geo": {
+          "lat": 55.18778894,
+          "long": -6.72122191
+        }
+      },
+      "description": "<p><strong>Portstewart to Portrush</strong> C815-386 to C856-407 Sheet 4 The coastline here is basalt and reasonably interesting, low lying at first. Rinagree Point at C833-397 is the halfway point. To its W is Black Rock and just off it lies Lawson’s Rock, which breaks even in a moderate swell. It is possible to shelter in the lee of Black Rock. There is a tiny storm beach accessible from landward just E of Rinagree Point. Boomers may be expected hereabouts. Rock hopping and narrow channels are best enjoyed in calmer conditions and at about HW. Tides An eddy runs west on the flood tide between Ramore Head to the Bann Barmouth from 2 hours before Belfast HW.</p> ",
+      "costalZone": "**The North East**",
+      "region": "->regions.North East"
+    },
+
+    "PortballintraetoDunseerick":{
+      "name": "**Portballintrae to Dunseverick**",
+      "coordinates": {
+        "geo": {
+          "lat": 55.21988365,
+          "long": -6.53948915
+        }
+      },
+      "description": "<p><strong>Portballintrae to Dunseverick</strong> C930-424 to C999-447 Sheet 5 The rocks between the harbour and Bushfoot Strand can be fun at HW. On passage however, give them plenty of clearance. Stay at least 200<em>m</em> clear of the E harbour entrance to avoid a boomer called the Blind Rock. Bushfoot is named for the River Bush which flows in here at the SW corner. Upriver 2<em>km</em> is the town of Bushmills, famed globally for its Black Bush whiskey. The beach tends to surf and should be used with caution. After rain, a brown tongue of water enters the sea and what happens to it is a good guide to what the tide is doing just then. The E part of the beach is irregularly rocky and not a good place for small boats. There is a small slip below Runkerry House at C934-435. The coastline eastwards is the Giant’s Causeway section. It is committing and there are no easy landing places. It is also one of the most beautiful sections of the entire Northern Ireland coastline. Just SE of the off-lying rock, the Mile Stone at C934-440, is the massive and beautiful Runkerry Cave at C935-439, complete with boulder beach and long dry passage. There are other caves hereabouts, most notably in a small cove 0.5<em>km</em> E of Runkerry called locally Portcoon, with a dry side entrance. There is a slip in Portnaboe, the last cove before the Causeway proper. Visitors once walked from this point, before the access from above was organised. The Causeway section itself is 5<em>km</em> around Benbane Head (C965-461). There are many exposures of geological features; dykes, sills and the various layers of volcanic activity are easily seen. The Causeway itself and all the related geology are far better seen from seaward. In strong offshore winds there are vicious down draughts and each of the bays can funnel the wind to strong gusts. Formidable tides run off Benbane Head and great seas can build up off it and off Bengore Head 1<em>km</em> E. The Spanish Armada The tragedy of the <em>Girona</em>, wrecked at Lacada Point C952-455, was that it was the most seaworthy of several ships that sailed on 16<sup>th</sup> October 1588 from Killybegs for Scotland. 1300 were drowned, including members of most of the noblest families in Spain. The remains of the wreck were discovered c1967 by a team of divers and a great number of artifacts including many many trinkets and jewellery did survive in the cracks and crevices off the Point, as well as cannons, cannonballs and other memorabilia which are now in The Ulster Museum in Belfast. Port Moon Port Moon at C979-451 on the E side of Contham Head C978-4456 is a natural small boat harbour among low rocks at the base of a 60<em>m</em> cliff. A bothy with a rusty roof marks the spot to the passerby, as do the salmon net poles around it, when close in. The bothy is presently the subject of a renovation programme which should be finished by summer 2011. The gut is 100<em>m</em> by 8<em>m</em> and there are rings on either side for shorelines. The port enjoys 1.5<em>m</em> LWS at the outer end. Landing is possible onto a sheltered but rough and stony shore/slip. Camping is nearby on grass, and there is even a stream. It has the remote feel of an island, despite a steep zig-zag path up the cliff to the public Causeway Coast Path. The coastline eastwards towards Dunseverick Castle falls away, but is bouldery. There is a small, well-sheltered harbour near Dunseverick at C999-447, about 1<em>km</em> E of the castle ruin, with a small maritime museum and good enough parking. Camping is possible here but forbidden, except in emergency. There are some lovely rock pools just W of the harbour, suitable for swimming and diving. This carpark has saved many a kayaker a long trip (E/W) if the weather breaks. Leaving a car at Dunserevick on a coastal passage is recommended.</p> ",
+      "costalZone": "**The North East**",
+      "region": "->regions.East Coast"
+    },
+
+    "RiverBann": {
+      "name": "**River Bann**",
+      "coordinates": {
+        "geo": {
+          "lat": 55.17124307,
+          "long": -6.77197253
+        }
+      },
+      "description": "<p><strong>River Bann</strong> C783-367 Sheet 4 To the E of Castlerock village is the Bar Mouth, where the River Bann flows into the sea. Turbulent water can be experienced quite a distance offshore. The flood at the mouth is weak by comparison to the ebb. Especially when the river is up, the ebb and the flow of the river combine to produce mighty standing waves. The flow of the river is controlled by floodgates well upstream. Powerful rip currents either side of the mouth are dangerous enough. The mouth artificially narrows the stream and this projects the fresh water out with great force. The fresh water is easily distinguished in the sea water and gives a good guide as to tide direction and strength off the beaches. The river is marked as far up as Coleraine. The area is a noted birding spot in winter.</p> ",
+      "costalZone": "**The North East**",
+      "region": "->regions.East Coast"
+    }
+  }
+
+}
